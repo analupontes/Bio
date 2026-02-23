@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biografia | AnaLu</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #ff90c4, #ff66ad);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.bio-container {
+    width: 100%;
+    max-width: 380px;
+    padding: 35px 25px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(18px);
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.profile-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.6);
+    box-shadow: 0 0 25px rgba(255,255,255,0.25);
+    margin-bottom: 18px;
+}
+
+.name {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 12px 0;
+    padding: 14px;
+    border-radius: 14px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.35s;
+}
+
+.instagram-btn {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+}
+
+.instagram-btn:hover {
+    box-shadow: 0 0 25px rgba(253,29,29,0.8);
+}
+
+.tiktok-btn {
+    background: linear-gradient(135deg, #000, #111);
+}
+
+.tiktok-btn:hover {
+    box-shadow:
+        0 0 15px #25f4ee,
+        0 0 25px #fe2c55;
+}
+
+.whatsapp-btn {
+    background: linear-gradient(135deg, #00ff6a, #00cc55);
+    color: #003b1f;
+    font-weight: 600;
+}
+
+.whatsapp-btn:hover {
+    box-shadow:
+        0 0 20px #00ff6a,
+        0 0 40px #00ff6a,
+        inset 0 0 10px rgba(0,0,0,0.3);
+}
+
+.copyright {
+    margin-top: 18px;
+    font-size: 12px;
+    opacity: 0.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bio-container">
+
+    <img
+        src="https://raw.githubusercontent.com/joaoricardobr-student/analu/refs/heads/main/analu.jpeg"
+        alt="Foto de perfil"
+        class="profile-photo"
+    >
+
+    <div class="name">Ana Lucia</div>
+
+    <a href="https://www.instagram.com/oiibonita_/" target="_blank" class="link-btn instagram-btn">
+        📸💋 Instagram da Oi, Bonita!
+    </a>
+
+    <a href="https://www.tiktok.com/@analuciapontess?_r=1&_t=ZS-949CZLELA6X" target="_blank" class="link-btn tiktok-btn">
+        🎵 TikTok
+    </a>
+
+    <a href="http://wa.me//554396174585" target="_blank" class="link-btn whatsapp-btn">
+        ✉️ Whatsapp
+    </a>
+
+</div>
+
+<p class="copyright">
+    © 2026 Programado e feito por João Ricardo, @0jrpg
+</p>
+
+</body>
+</html>
+
+
