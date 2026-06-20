@@ -1,1 +1,17 @@
-...
+[
+  {
+    "codigo":"001",
+    "nome":"Sacola Oi, Bonita",
+    "tipo":"Sacola",
+    "preco":29.90,
+    "imagem":"github.com/analupontes/Bio/blob/main/299906687_1002630917132304_6906633300840841809_n.png?raw=true"
+  },
+
+  {
+    "codigo":"002",
+    "nome":"Caneca Oi, Bonita",
+    "tipo":"Caneca",
+    "preco":39.90,
+    "imagem":"github.com/analupontes/Bio/blob/main/299906687_1002630917132304_6906633300840841809_n.png?raw=true"
+  }
+]
