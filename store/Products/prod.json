@@ -6,7 +6,7 @@
     "tipo": "Sacola",
     "preco": 29.90,
     "estoque": 10,
-    "imagem": "assets/images/sacola1.jpg"
+    "imagem": "https://raw.githubusercontent.com/analupontes/Bio/refs/heads/main/299906687_1002630917132304_6906633300840841809_n.png"
   },
   {
     "codigo": "002",
@@ -15,6 +15,6 @@
     "tipo": "Caneca",
     "preco": 39.90,
     "estoque": 15,
-    "imagem": "assets/images/caneca1.jpg"
+    "imagem": "https://raw.githubusercontent.com/analupontes/Bio/refs/heads/main/299906687_1002630917132304_6906633300840841809_n.png"
   }
 ]
