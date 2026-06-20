@@ -60,14 +60,23 @@ color:white;
 
 #search{
 
-width:90%;
-max-width:400px;
+    width:100%;
+    max-width:500px;
 
-padding:12px;
+    padding:15px 20px;
 
-border:none;
-border-radius:15px;
+    border:none;
 
+    border-radius:50px;
+
+    background:white;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.08);
+
+    font-size:15px;
+
+    color:#222;
 }
 
 .categories{
@@ -78,23 +87,56 @@ margin-bottom:20px;
 }
 
 .categories button{
-padding:10px 15px;
-border:none;
-border-radius:20px;
-cursor:pointer;
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    background:white;
+
+    color:#444;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.categories button.active{
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff4fa1,
+        #ff78b6
+    );
+
+    color:white;
 }
 
 #products{
 
-display:grid;
+    max-width:1400px;
 
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
+    margin:auto;
 
-gap:20px;
+    display:grid;
 
-padding:20px;
+    grid-template-columns:
+    repeat(
+        auto-fill,
+        minmax(280px,1fr)
+    );
 
+    gap:25px;
+
+    padding:25px;
 }
 
 .card{
@@ -178,21 +220,31 @@ font-size:14px;
 
 #cartButton{
 
-position:fixed;
+    position:fixed;
 
-bottom:20px;
-right:20px;
+    bottom:25px;
+    right:25px;
 
-width:60px;
-height:60px;
+    width:70px;
+    height:70px;
 
-border-radius:50%;
+    border:none;
 
-border:none;
+    border-radius:50%;
 
-font-size:20px;
+    background:
+    linear-gradient(
+        135deg,
+        #ff4fa1,
+        #ff78b6
+    );
 
-cursor:pointer;
+    color:white;
+
+    font-size:24px;
+
+    box-shadow:
+    0 10px 30px rgba(255,79,161,.4);
 }
 
 #cartPanel{
