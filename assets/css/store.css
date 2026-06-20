@@ -122,12 +122,19 @@ padding:20px;
 
 }
 
+.card-content{
+    padding:18px;
+}
+
 .card img{
 
-width:100%;
+    width:100%;
 
-border-radius:15px;
+    height:260px;
 
+    object-fit:cover;
+
+    display:block;
 }
 
 .buy{
