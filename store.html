@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Catálogo</title>
+
+<style>
+
+body{
+    font-family:Poppins,sans-serif;
+    background:#ff66ad;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    color:white;
+}
+
+#products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:15px;
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.add{
+    background:#00cc66;
+    color:white;
+}
+
+#cartBtn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:auto;
+    padding:15px;
+    border-radius:50px;
+    background:#25D366;
+    color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🛍️ Catálogo</h1>
+
+<div id="products"></div>
+
+<button id="cartBtn">
+🛒 Finalizar Pedido
+</button>
+
+<script>
+
+let cart=[];
+
+fetch("store/Products/prod.json")
+.then(r=>r.json())
+.then(products=>{
+
+const container=document.getElementById("products");
+
+products.forEach(product=>{
+
+container.innerHTML+=`
+
+<div class="card">
+
+<img src="${product.imagem}">
+
+<h3>${product.nome}</h3>
+
+<p>${product.tipo}</p>
+
+<p>R$ ${product.preco}</p>
+
+<button class="add"
+onclick='addToCart(${JSON.stringify(product)})'>
+
+Adicionar
+
+</button>
+
+</div>
+
+`;
+
+});
+
+});
+
+function addToCart(product){
+
+cart.push(product);
+
+alert("Adicionado!");
+
+}
+
+document.getElementById("cartBtn").onclick=()=>{
+
+if(cart.length===0){
+
+alert("Carrinho vazio");
+
+return;
+
+}
+
+let msg="Olá! Quero fazer um pedido:%0A%0A";
+
+let total=0;
+
+cart.forEach(item=>{
+
+msg+=
+`Código: ${item.codigo}%0A`+
+`Nome: ${item.nome}%0A`+
+`Tipo: ${item.tipo}%0A`+
+`Preço: R$${item.preco}%0A%0A`;
+
+total+=item.preco;
+
+});
+
+msg+=`Total: R$${total}`;
+
+window.open(
+`https://wa.me/554396174585?text=${msg}`
+);
+
+};
+
+</script>
+
+</body>
+</html>
