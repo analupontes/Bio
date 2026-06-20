@@ -1,8 +1,16 @@
 body{
-margin:0;
-font-family:Poppins,sans-serif;
-background:#ff7eb6;
-overflow-x:hidden;
+    margin:0;
+    font-family:'Poppins',sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff5f9,
+        #ffe4ef,
+        #ffd6e8
+    );
+
+    color:#222;
 }
 
 .bg-animation{
