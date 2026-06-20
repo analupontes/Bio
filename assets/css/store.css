@@ -139,20 +139,37 @@ padding:20px;
 
 .buy{
 
-width:100%;
+    width:100%;
 
-padding:10px;
+    padding:14px;
 
-margin-top:10px;
+    border:none;
 
-border:none;
+    border-radius:14px;
 
-border-radius:10px;
+    background:
+    linear-gradient(
+        135deg,
+        #ff4fa1,
+        #ff78b6
+    );
 
-background:#fff;
+    color:white;
 
-cursor:pointer;
+    font-weight:600;
 
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.buy:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 10px 25px
+    rgba(255,79,161,.35);
 }
 
 .stock{
