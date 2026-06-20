@@ -1,39 +1,46 @@
 body{
-    margin:0;
-    font-family:'Poppins',sans-serif;
-
-    background:
-    linear-gradient(
-        135deg,
-        #fff5f9,
-        #ffe4ef,
-        #ffd6e8
-    );
-
-    color:#222;
+    background:#fff7fb;
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
 }
 
-.bg-animation{
-position:fixed;
-inset:0;
-
-background:
-linear-gradient(
--45deg,
-#ff5ea8,
-#ff85c2,
-#ff6fb3,
-#ff9fd1
-);
-
-background-size:400% 400%;
-
-animation:gradient 12s ease infinite;
-
-z-index:-1;
+body::before,
+body::after{
+    content:"";
+    position:fixed;
+    border-radius:50%;
+    filter:blur(100px);
+    z-index:-1;
 }
 
-@keyframes gradient{
+body::before{
+    width:500px;
+    height:500px;
+    background:#ff7eb6;
+    top:-150px;
+    left:-100px;
+    animation:float1 12s infinite alternate ease-in-out;
+}
+
+body::after{
+    width:400px;
+    height:400px;
+    background:#ffd1e6;
+    right:-100px;
+    bottom:-100px;
+    animation:float2 10s infinite alternate ease-in-out;
+}
+
+@keyframes float1{
+    from{transform:translateY(0);}
+    to{transform:translateY(100px);}
+}
+
+@keyframes float2{
+    from{transform:translateX(0);}
+    to{transform:translateX(-80px);}
+}
 
 0%{
 background-position:0% 50%;
@@ -50,12 +57,37 @@ background-position:0% 50%;
 }
 
 header{
-padding:20px;
-text-align:center;
+
+    position:sticky;
+    top:0;
+
+    backdrop-filter:blur(25px);
+
+    background:rgba(255,255,255,.75);
+
+    border-bottom:1px solid rgba(0,0,0,.08);
+
+    padding:20px;
+
+    z-index:999;
 }
 
 header h1{
-color:white;
+
+    font-size:3rem;
+
+    font-weight:800;
+
+    background:linear-gradient(
+        135deg,
+        #ff4fa1,
+        #ff79b7
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:15px;
 }
 
 #search{
@@ -225,26 +257,36 @@ font-size:14px;
     bottom:25px;
     right:25px;
 
-    width:70px;
-    height:70px;
+    width:75px;
+    height:75px;
 
     border:none;
 
     border-radius:50%;
 
-    background:
-    linear-gradient(
+    background:linear-gradient(
         135deg,
         #ff4fa1,
-        #ff78b6
+        #ff79b7
     );
 
     color:white;
 
-    font-size:24px;
+    font-size:28px;
+
+    cursor:pointer;
 
     box-shadow:
-    0 10px 30px rgba(255,79,161,.4);
+    0 15px 40px rgba(255,79,161,.4);
+
+    transition:.3s;
+}
+
+#cartButton:hover{
+
+    transform:translateY(-5px)
+    scale(1.05);
+
 }
 
 #cartPanel{
