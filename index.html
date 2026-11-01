@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecionando...</title>
-    
-    <!-- Redireciona para o link desejado após 3 segundos (mude o '0' para imediato) -->
-    <meta http-equiv="refresh" content="3;url=https://jrway.vercel.app/analu">
-    
-    <style>
-        body {
-            /* Define a cor de fundo rosa (use #ffc0cb para rosa claro ou #ff69b4 para rosa choque) */
-            background-color: #ffc0cb; 
-            
-            /* Centraliza o texto perfeitamente na tela */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            
-            /* Estilo da fonte */
-            font-family: Arial, sans-serif;
-            font-size: 24px;
-            font-weight: bold;
-            color: #333333; /* Cor do texto (cinza escuro) */
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redirecionando</title>
+<noscript>
+  <meta http-equiv="refresh" content="3;url=https://jrway.vercel.app/analu">
+</noscript>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    background: #ffc0d9;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .texto {
+    color: #000000;
+    font-size: 2rem;
+    font-weight: 500;
+    display: flex;
+  }
+  /* largura fixa para o texto não "pular" quando os pontos aumentam */
+  .pontos {
+    display: inline-block;
+    width: 1.5em;
+    text-align: left;
+  }
+</style>
 </head>
 <body>
+  <div class="texto">
+    <span>Redirecionando</span><span class="pontos" id="pontos"></span>
+  </div>
 
-    <div>Redirecionando...</div>
+<script>
+  var destino = "https://jrway.vercel.app/analu";
+  var pontos = document.getElementById("pontos");
+  var contagem = 0;
 
+  // A cada segundo adiciona um ponto (0 a 3, depois recomeça)
+  var intervalo = setInterval(function () {
+    contagem = (contagem + 1) % 4;
+    pontos.textContent = ".".repeat(contagem);
+  }, 1000);
+
+  // Redireciona após 4 segundos (replace evita voltar para esta página)
+  setTimeout(function () {
+    clearInterval(intervalo);
+    window.location.replace(destino);
+  }, 4000);
+</script>
 </body>
 </html>
