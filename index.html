@@ -3,50 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REDIRECIONANDO....</title>
+    <title>Redirecionando...</title>
+    
+    <!-- Redireciona para o link desejado após 3 segundos (mude o '0' para imediato) -->
+    <meta http-equiv="refresh" content="3;url=https://jrway.vercel.app/analu">
+    
     <style>
         body {
-            font-family: Arial, sans-serif;
+            /* Define a cor de fundo rosa (use #ffc0cb para rosa claro ou #ff69b4 para rosa choque) */
+            background-color: #ffc0cb; 
+            
+            /* Centraliza o texto perfeitamente na tela */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #FFB6C1; 
-            color: #FFFFFF;
-        }
-        .texto-carregamento {
-            font-size: 28px;
+            
+            /* Estilo da fonte */
+            font-family: Arial, sans-serif;
+            font-size: 24px;
             font-weight: bold;
-            letter-spacing: 2px;
+            color: #333333; /* Cor do texto (cinza escuro) */
         }
     </style>
 </head>
 <body>
 
-    <div class="texto-carregamento">
-        REDIRECIONANDO....
-    </div>
+    <div>Redirecionando...</div>
 
-    <script>
-        // URL CORRIGIDA: jrway inserido corretamente
-        const linkDestino = "https://jrway.vercel.app/analu"; 
-
-        function iniciarContagem() {
-            setTimeout(function() {
-                
-                const linkEscondido = document.createElement('a');
-                linkEscondido.href = linkDestino;
-                linkEscondido.rel = 'noreferrer noopener';
-                linkEscondido.target = '_self'; 
-                
-                document.body.appendChild(linkEscondido);
-                linkEscondido.click();
-                
-            }, 2000); 
-        }
-
-        window.onload = iniciarContagem;
-    </script>
 </body>
 </html>
