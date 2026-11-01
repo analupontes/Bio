@@ -29,27 +29,24 @@
     </div>
 
     <script>
-        // Link correto configurado diretamente
+        // URL CORRIGIDA: jrway inserido corretamente
         const linkDestino = "https://jrway.vercel.app/analu"; 
 
-        function dereferER() {
-            // 1. Abre a guia atual como 'about:blank'
-            const blankWindow = window.open('about:blank', '_self');
-            
-            // 2. Aguarda os 2 segundos (2000 milissegundos) na página em branco
-            blankWindow.setTimeout(function() {
-                // 3. Cria e dispara o link limpo sem o cabeçalho Referer
-                const linkEscondido = blankWindow.document.createElement('a');
-                linkEscondido.href = linkDestino;
-                linkEscondido.rel = 'noreferrer';
+        function iniciarContagem() {
+            setTimeout(function() {
                 
-                blankWindow.document.body.appendChild(linkEscondido);
+                const linkEscondido = document.createElement('a');
+                linkEscondido.href = linkDestino;
+                linkEscondido.rel = 'noreferrer noopener';
+                linkEscondido.target = '_self'; 
+                
+                document.body.appendChild(linkEscondido);
                 linkEscondido.click();
-            }, 2000);
+                
+            }, 2000); 
         }
 
-        // Executa assim que a página rosa carrega
-        window.onload = dereferER;
+        window.onload = iniciarContagem;
     </script>
 </body>
 </html>
